@@ -1,38 +1,116 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+font-family: "Poppins", sans-serif;
+}
+
+h1{
+  color: white;
   text-align: center;
+  margin : 20px 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+background-color: #1a1273;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.flexContainer{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.form{
+  height: 40px;
+  margin-bottom: 50px;
+  width: 500px;
+  display: flex;
+}
+
+.form input{
+  flex: 4;
+  border: none;
+  outline: none;
+  background-color: white;
+  height: 100%;
+  border-radius:  5px 0 0 5px ;
+  padding-left: 10px;
+  border: 2px solid blue;
+  color: #00008B;
+  font-weight: 600;
+}
+
+button{
+  background-color: blue;
   color: white;
+  /* padding: 10px; */
+  border: none;
 }
 
-.App-link {
-  color: #61dafb;
+.addButton{
+  height: 100%;
+  flex: 1;
+  border-radius: 0 5px 5px 0;
+  font-size: 20px;
+  font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.modifyButton{
+  width: 80px;
+  padding: 5px;
+  margin: 5px 10px;
+  border-radius: 4px;
+}
+
+.taskCard {
+  height: 100px;
+  min-width: 200px;
+  background-color: white;
+  color: #1a1273;
+  font-weight: 600;
+  font-size: 16px;
+  box-shadow: 0px 0px -15px 5px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 10px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.button .delete{
+  margin: 10px;
+}
+
+.tasks{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+}
+
+@media screen and (max-width:1200px) {
+  .tasks{
+  grid-template-columns: repeat(2,1fr);
+
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media screen and (max-width:800px) {
+  .tasks{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form{
+    width: 300px;
   }
 }
